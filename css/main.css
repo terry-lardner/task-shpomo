@@ -48,6 +48,18 @@ body {
     box-sizing: border-box;
 }
 
+.container {
+    margin: 0 auto;
+}
+
+.gutter {
+    margin: 0 3%;
+}
+
+.inline-spacing-fix {
+    font-size: 0;
+}
+
 /* Dropit menu override*/
 .dropit .dropit-submenu {
     min-width: 90px;
@@ -66,11 +78,8 @@ body {
 }
 /* Dropit menu override end */
 
+/* Header - nav */
 .nav-menu {
-    padding: 5em 0;
-}
-
-.menu {
     float: right;
 }
 
@@ -91,10 +100,6 @@ body {
 
 .menu a {
     color: inherit;
-}
-
-.container {
-    margin: 0 auto;
 }
 
 .logo {
@@ -159,18 +164,10 @@ body {
     background-size: cover;
     width: 100%;
 }
-
+/* Teasers section */
 .teasers,
 .welcome {
     padding-top: 2.5em;
-}
-
-.primary-footer {
-    padding: 1.5em 0;
-}
-
-.row {
-    display: inline-block;
 }
 
 .teaser {
@@ -191,11 +188,8 @@ body {
     font-size: 13px;
 }
 
-
-
 .teaser p {
-    line-height: 1.8em;
-      
+    line-height: 1.8em;      
 }
 
 .teaser a {
@@ -203,8 +197,7 @@ body {
 }
 
 .teaser .teaser-img {
-    border-radius: 150px;
-    
+    border-radius: 150px;    
 }
 
 .teaser-highlight {
@@ -223,6 +216,8 @@ body {
     color:red;
     padding: 3em 0;
 }
+
+/* Welcome section */
 
 .welcome {
     background-color: #812c2c;
@@ -283,6 +278,11 @@ body {
 
 }
 
+/* Footer */
+.primary-footer {
+    padding: 1.5em 0;
+}
+
 .primary-footer {
     background-color: #ce5a5a;
     color: #fff; 
@@ -297,6 +297,8 @@ body {
     float:right;
 }
 
+/* Grid */
+
 .col-1-3,
 .col-2-3,
 .col-1-3-gutter,
@@ -304,34 +306,32 @@ body {
     display: inline-block;    
 }
 
-.gutter {
-    margin: 0 3%;
-}
-
-.inline-spacing-fix {
-    font-size: 0;
-}
-
 /* MEDIA QUERIES */
-@media screen and (max-width:480px) {   
-
-    .primary-footer {
-        font-size: 12px;
-    }
-
+@media screen and (max-width:480px) {      
     .logo {
         font-size: 40px;
     }
 
-    .nav-menu {
-        padding: 4em 1.22em;
+    .primary-footer {
+        font-size: 12px;
     }
-
 }
 
 @media screen and (max-width: 767px) {
     .container {
         width: 80%;
+    }
+
+    .primary-nav {
+        display: none;
+    }
+
+    .social {
+        float: left;
+        clear: left;
+        padding: 0;
+        margin-bottom: 2em;
+        border: 0;
     }
 
     .jumbotron {
@@ -342,11 +342,6 @@ body {
         width: 250px;
         height: 250px;
     }    
-
-    .social,
-    .primary-nav {
-        display: none;
-    }
 
     .welcome-text {
         text-align: justify;
