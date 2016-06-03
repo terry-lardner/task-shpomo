@@ -4,7 +4,7 @@
 	var $lookupError = $('.teasers').find('#lookupError');
 	var template = $('.teasers').find('#pixabayTemplate').html();
 	var $teaser;
-	var results = 17;
+	var results = 7;
 
 	function render(obj) {
 		$teasersContainer.append(Mustache.render(template, obj));
@@ -19,6 +19,7 @@
 					$.each(data.hits, function(i, result) {
 						result.img_url = result.webformatURL;
 						result.page_url = result.pageURL;
+						result.user_page = 'https://pixabay.com/en/users/' + result.user + '-' + result.user_id;
 						render(result);
 					});
 
@@ -27,7 +28,7 @@
 
 					//Add a gutter to every middle element	
 					for(i=1; i<=$teaser.length; i+=3) {
-						$teaser.eq(i).addClass('gutter')
+						$teaser.eq(i).addClass('gutter');
 					}
 
 					bindEvents();					
