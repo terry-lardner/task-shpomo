@@ -1,0 +1,430 @@
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial;
+    font-size: 13px;
+
+}
+
+* {
+    border: 0;
+    margin: 0;
+    padding:0;
+}
+
+.hide {
+    display: none;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Dropit menu override*/
+.dropit .dropit-submenu {
+    min-width: 90px;
+    left: inherit;
+    right: 0;
+    color: #000;
+}
+.dropit-trigger {
+    border: 1px solid #000;
+    padding: 8px 5px;
+}
+
+.dropit-open {
+    background-color: #B33636;
+    color: #fff;
+}
+/* Dropit menu override end */
+
+.nav-menu {
+    padding: 5em 0;
+}
+
+.menu {
+    float: right;
+}
+
+.menu .item-list {
+    background-color: #fff;
+    border:1px solid #000;
+    margin-right: -1px;
+}
+
+.menu .item-list li {
+    padding: 8px;
+}
+
+.menu .item-list li:hover {
+    background-color: #B33636;
+    color:#fff;
+}
+
+.menu a {
+    color: inherit;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    margin: 0.30em 0;
+    padding: 10px 0;
+    float: left;
+    font-size: 50px;
+}
+
+.logo a {
+    color: #B33636;
+}
+
+.social,
+.primary-nav {
+    float: right;
+    clear: right;
+}
+
+.social {
+    color: #8A8A8A;
+    font-size: 13px;
+    font-style: italic;
+    border-bottom: 1px solid #E3E3E3;
+    padding: 2.5em 0 1em 0;
+}
+
+.social a {
+    color: #D91818;
+}
+
+.primary-nav ul {
+    padding: 1em 0 3em 0;
+}
+
+.primary-nav li {
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 2em;
+}
+
+.primary-nav li:first-child {
+    padding-left: 0;
+}
+
+.primary-nav a {
+    color: #000;
+    font-weight: bold;
+}
+
+.primary-nav a.active,
+.primary-nav a:hover {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #C40E0E;
+}
+
+.jumbotron {
+    background-image: url('../img/ball-607512_1920.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.teasers,
+.welcome {
+    padding-top: 2.5em;
+}
+
+.primary-footer {
+    padding: 1.5em 0;
+}
+
+.row {
+    display: inline-block;
+}
+
+.teaser {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.teaser-cursor {
+    cursor: pointer;  
+}
+
+.teaser-title {
+    margin: 1.5em 0 0.2em 0;
+    font-size: 17px;
+}
+
+.teaser-text {
+    font-size: 13px;
+}
+
+
+
+.teaser p {
+    line-height: 1.8em;
+      
+}
+
+.teaser a {
+    color: inherit;
+}
+
+.teaser .teaser-img {
+    border-radius: 150px;
+    
+}
+
+.teaser-highlight {
+    color: #C93838;
+}
+
+.teaser-img-border-default {
+     border: 4px solid #943434;
+}
+
+.teaser-img-border-active {
+     border: 4px solid #C93838;
+}
+
+.teaser-lookup-error {
+    color:red;
+    padding: 3em 0;
+}
+
+.welcome {
+    background-color: #812c2c;
+    color: #fff;
+}
+
+.welcome-text {
+    line-height: 1.8em;
+}
+
+.section-title {
+    padding-bottom: 10px;
+}
+
+.welcome-text-container,
+.form-container {
+    padding-bottom: 2.5em;
+}
+
+.form-container {
+    vertical-align: top;
+
+}
+.enquiry-form input:not(.btn-submit),
+.enquiry-form select,
+.enquiry-form textarea {
+    display: block;
+    border: 2px solid #F29696;
+    margin: 10px 0;
+    padding: 10px 5px;
+    width: 100%;
+    font-family: Arial;
+    color: #707070;
+    outline: none;    
+}
+
+.enquiry-form textarea {
+    resize: none;
+    height: 180px;
+}
+
+.btn-submit {
+    float: right;
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 13px 50px;
+    border:1px solid #5ace7b;
+    background-color: #1f813b;
+    color: #fff;
+}
+
+.btn-submit:focus {
+    outline: none;
+}
+
+.btn-submit:active {
+    background-color: #1AAD44;
+
+}
+
+.primary-footer {
+    background-color: #ce5a5a;
+    color: #fff; 
+}
+
+.primary-footer a {
+    color: #fff;
+    border-bottom: 2px solid #F29696;
+}
+
+.primary-footer span:last-child {
+    float:right;
+}
+
+.col-1-3,
+.col-2-3,
+.col-1-3-gutter,
+.col-2-3-gutter {
+    display: inline-block;    
+}
+
+.gutter {
+    margin: 0 3%;
+}
+
+.inline-spacing-fix {
+    font-size: 0;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width:480px) {   
+
+    .primary-footer {
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 40px;
+    }
+
+    .nav-menu {
+        padding: 4em 1.22em;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 80%;
+    }
+
+    .jumbotron {
+        height: 300px; 
+    }
+
+    .teaser img {
+        width: 250px;
+        height: 250px;
+    }    
+
+    .social,
+    .primary-nav {
+        display: none;
+    }
+
+    .welcome-text {
+        text-align: justify;
+    }
+
+    .form-container {
+        width: 80%;
+    }    
+}
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 60%;
+    }
+
+    .jumbotron {
+        height: 480px; 
+    }
+
+    .teaser img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .col-1-3 {
+        width: 33.33%;
+    }
+
+    .col-1-3-gutter {
+        width: 31.33%;
+    }
+
+    .col-2-3 {
+        width: 66.66%;
+    }
+
+    .col-2-3-gutter {
+        width: 64.66%;
+    }
+
+    .welcome-text {
+        padding: 0 2em 0 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px){
+    .container {
+        width: 85%;
+    }
+
+    .primary-nav {
+        font-size: 13px;        
+    }
+
+    .teaser img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .col-1-3 {
+        width: 33.33%;
+    }
+
+    .col-1-3-gutter {
+        width: 31.33%;
+    }
+
+    .col-2-3 {
+        width: 66.66%;
+    }
+
+    .col-2-3-gutter {
+        width: 64.66%;
+    }
+
+}
