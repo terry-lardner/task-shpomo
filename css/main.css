@@ -9,7 +9,6 @@
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-
 .clearfix:before,
 .clearfix:after {
     content: " "; /* 1 */
@@ -18,6 +17,11 @@
 
 .clearfix:after {
     clear: both;
+}
+
+html,
+body {
+    height: 100%;
 }
 
 a {
@@ -217,6 +221,36 @@ body {
     padding: 3em 0;
 }
 
+/* Modal */
+.modalContainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.modal-img-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+}
+
+.modal-bg {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    overflow: hidden;
+    opacity: 0.8;
+}
+
+.modal-img {
+    border: 5px solid #fff;
+    max-width:100%;
+    max-height:100%;
+}
+
 /* Welcome section */
 
 .welcome {
@@ -349,6 +383,14 @@ body {
 
     .form-container {
         width: 80%;
+    }
+
+
+}
+
+@media screen and (max-width: 767px) and (orientation:landscape) {
+    .modal-img-container {
+        height: 80%;
     }    
 }
 
@@ -392,7 +434,7 @@ body {
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1280px){
+@media screen and (min-width: 768px) and (max-width: 1280px) {
     .container {
         width: 85%;
     }
